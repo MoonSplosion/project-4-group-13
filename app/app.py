@@ -23,26 +23,27 @@ def tableau():
     # Return template and data
     return render_template("tableau.html")
 
+@app.route("/ml")
+def ml():
+    # Return template and data
+    return render_template("ml.html")
+
 @app.route("/makePredictions", methods=["POST"])
 def make_predictions():
     content = request.json["data"]
     print(content)
 
     # parse
-    Name = content["Name"]
-    Type = content["Type"]
-    Species = content["Species"]
-    Height = content["Height"]
-    Weight = content["Weight"]
-    Abilities = content["Abilities"]
-    Catch_Rate = content["Catch Rate"]
-    Base_Friendship = content["Base Friendship"]
-    Base_Exp = content["Base_Exp"]
-    Growth_Rate = content["Growth Rate"]
+    Base_Exp = float(content["Base_Exp"])
+    Attack = float(content["Attack"])
+    Sp_Atk = float(content["Sp_Atk"])
+    Defense = float(content["Defense"])
+    Sp_Def = float(content["Sp_Def"])
+    HP = float(content["HP"])
 
 
 
-    preds = modelHelper.makePredictions(Name, Type, Species, Height, Weight, Abilities, Catch_Rate, Base_Friendship, Base_Exp, Growth_Rate)
+    preds = modelHelper.makePredictions(Attack, Sp_Atk, Defense, Sp_Def, HP, Base_Exp)
     return(jsonify({"ok": True, "prediction": str(preds)}))
 
 

@@ -3,48 +3,68 @@
 
 <head>
     <meta charset="utf-8">
-    <title>POKEMON ML</title>
+    <title>Pokemon Machine Learning</title>
     <!-- Boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
+   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css"> -->
+   <script src="https://unpkg.com/nes.css/css/nes.css"></script>
+   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+   <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet">
     <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!-- <link href="../static/css/style.css" rel="stylesheet"> -->
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- JS -->
-    <script type="text/javascript" src="static/js/logic.js"></script>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../static/css/main.css">
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Titanic
-                <span class="sr-only">(current)</span>
-              </a>
-                </li>
-            </ul>
+    <header class> 
+        <div class="container">
+        <div class="nav-brand">
+            <a href="https://github.com/MoonSplosion/project-4-group-13">
+                <h1>
+                    <i class="github-link"></i>
+                </h1>
+                
+            </a>
+            
         </div>
-    </nav>
-    <a href="/about_us">About Us</a>
-    <a href="/ml">Machine Learning</a>
-    <a href="/tableau">Tableau</a>
-    <hr style="color:lightgray; border-width: 3px;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Pokemon Catching
+                    <span class="sr-only">(current)</span>
+                  </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a class="nav" href="/about_us">About Us</a>&nbsp;
+        <a class="nav" href="/ml">Machine Learning</a>&nbsp;
+        <a class="nav" href="/tableau">Tableau</a>
 
-    <hr style="color:lightgray; border-width: 3px;">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 id="output"></h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 id="output"></h1>
+                </div>
             </div>
         </div>
-    </div>
+        </div>
+
+    </header>
+    
+
 
 </body>
 
@@ -57,49 +77,12 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="col-form-label" for="gender">Gender</label>
-                            <select id="gender">
-                                <option value="female">Female</option>
-                                <option value="male">Male</option>
-                            </select>
+                            <label class="col-form-label" for="Name">Name</label>
+                            <input type="text" class="form-control" value="Your Pokemon Here" id="Name">
                         </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="age">Age</label>
-                            <input type="text" class="form-control" value="25" id="age">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="fare">Fare</label>
-                            <input type="text" class="form-control" value="25.50" id="fare">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="col-form-label" for="familySize">Family Size</label>
-                            <input type="text" class="form-control" value="2" id="familySize">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="pclass">Passenger Class</label>
-                            <select id="pclass">
-                                <option value="1">First Class</option>
-                                <option value="2">Second Class</option>
-                                <option value="3">Third Class</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="embarked">Embarked Port</label>
-                            <select id="embarked">
-                                <option value="C">Cherbourg</option>
-                                <option value="Q">Queenstown</option>
-                                <option value="S">Southampton</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="has_cabin">Has Cabin?</label>
-                            <select id="has_cabin">
-                                <option value="0">False</option>
-                                <option value="1">True</option>
-                            </select>
-                        </div>
+
+
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -110,3 +93,5 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="../static/js/logic.js"></script>
