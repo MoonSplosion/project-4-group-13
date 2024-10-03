@@ -23,6 +23,11 @@ def tableau():
     # Return template and data
     return render_template("tableau.html")
 
+@app.route("/tableau2")
+def tableau2():
+    # Return template and data
+    return render_template("tableau2.html")
+
 @app.route("/ml")
 def ml():
     # Return template and data
