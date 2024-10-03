@@ -23,6 +23,10 @@ header {
   background-color: white;
 }
 
+ .h5 {
+  font-family: "Press Start 2P", serif;
+}
+
 header > .container {
   display: flex;
   align-items: baseline;
