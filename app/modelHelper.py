@@ -27,6 +27,8 @@ class ModelHelper():
             print("Data file not found.")
             return None
 
+    
+
     def makePredictions(self, Name):
         # Check if model and data are loaded
         if self.model is None or self.data is None:

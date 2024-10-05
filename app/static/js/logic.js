@@ -10,19 +10,12 @@ $(document).ready(function() {
 
 // call Flask API endpoint
 function makePredictions() {
-    var Base_Exp = $("#Base_Exp").val();//Type
-    var Attack = $("#Attack").val();
-    var Sp_Atk = $("#Sp_Atk").val();
-    var Defense = $("#Defense").val();
-    var Sp_Def = $("#Sp_Def").val();
-    var Growth_Rate = $("#Growth_Rate").val();
-    var HP = $("#HP").val();
-
-
+    
     // check if inputs are valid
 
     // create the payload
     var payload = {
+        "Name": Name,
         "Base_Exp": Base_Exp,
         "Attack": Attack,
         "Sp_Atk": Sp_Atk,
